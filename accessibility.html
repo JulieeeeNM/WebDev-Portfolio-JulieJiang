@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Accessibility</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">DevPortfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="design-thinking.html">Design Thinking</a></li>
+                    <li><a href="global-goals.html">Global Goals</a></li>
+                    <li class="active"><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Accessibility Statement</h1>
+        
+        <section class="accessibility-intro">
+            <p>I am committed to ensuring digital accessibility for people with disabilities. I continually improve the user experience for everyone by applying the relevant accessibility standards.</p>
+        </section>
+
+        <section class="accessibility-features">
+            <h2>Implemented Accessibility Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Semantic HTML</h3>
+                    <p>Proper use of heading hierarchy, landmarks, and ARIA attributes to ensure screen reader compatibility.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Keyboard Navigation</h3>
+                    <p>All interactive elements are accessible via keyboard, with visible focus states.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Color Contrast</h3>
+                    <p>Text and interactive elements meet WCAG 2.1 AA contrast ratio requirements.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Alternative Text</h3>
+                    <p>All meaningful images include descriptive alt text for screen reader users.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Responsive Design</h3>
+                    <p>The site is fully responsive and usable on all device sizes.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Reduced Motion</h3>
+                    <p>Animation preferences are respected based on user system settings.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="accessibility-testing">
+            <h2>Testing & Compliance</h2>
+            <p>This website has been tested using the following methods:</p>
+            <ul>
+                <li>Automated testing with WAVE and axe tools</li>
+                <li>Manual keyboard navigation testing</li>
+                <li>Screen reader testing with NVDA and VoiceOver</li>
+                <li>Color contrast verification</li>
+                <li>User testing with people with disabilities</li>
+            </ul>
+            <p>I aim to meet WCAG 2.1 Level AA standards, though some third-party content may not be fully accessible.</p>
+        </section>
+
+        <section class="accessibility-feedback">
+            <h2>Feedback & Contact</h2>
+            <p>I welcome your feedback on the accessibility of this website. Please let me know if you encounter accessibility barriers:</p>
+            
+            <form id="accessibilityForm">
+                <div class="form-group">
+                    <label for="feedback-name">Name:</label>
+                    <input type="text" id="feedback-name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="feedback-email">Email:</label>
+                    <input type="email" id="feedback-email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="feedback-message">Accessibility Issue:</label>
+                    <textarea id="feedback-message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><span>GitHub</span></a>
+                <a href="#" aria-label="LinkedIn"><span>LinkedIn</span></a>
+                <a href="#" aria-label="Twitter"><span>Twitter</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

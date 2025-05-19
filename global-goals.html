@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Global Goals</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">DevPortfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="design-thinking.html">Design Thinking</a></li>
+                    <li class="active"><a href="global-goals.html">Global Goals</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>UN Sustainable Development Goals</h1>
+        
+        <section class="goal-hero">
+            <div class="goal-image">
+                <img src="https://via.placeholder.com/400x300" alt="SDG 4: Quality Education">
+            </div>
+            <div class="goal-content">
+                <h2>Goal 4: Quality Education</h2>
+                <p>Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.</p>
+                <button id="learnMoreBtn" class="btn">Learn More</button>
+            </div>
+        </section>
+
+        <section class="goal-details">
+            <h2>Why This Goal Matters to Me</h2>
+            <p>As a web developer, I believe technology can play a crucial role in making education more accessible worldwide. I'm particularly interested in how digital platforms can:</p>
+            <ul>
+                <li>Provide learning opportunities in remote areas</li>
+                <li>Offer personalized education experiences</li>
+                <li>Make education more affordable and scalable</li>
+                <li>Support teachers with better resources</li>
+            </ul>
+        </section>
+
+        <section class="goal-action">
+            <h2>How I Contribute</h2>
+            <div class="action-cards">
+                <div class="action-card">
+                    <h3>Volunteering</h3>
+                    <p>I volunteer with organizations that teach coding to underprivileged youth, helping bridge the digital divide.</p>
+                </div>
+                <div class="action-card">
+                    <h3>Accessible Design</h3>
+                    <p>I prioritize accessibility in all my projects, ensuring educational content is available to people with disabilities.</p>
+                </div>
+                <div class="action-card">
+                    <h3>Open Source</h3>
+                    <p>I contribute to open-source educational platforms to help reduce costs for schools and learners.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="goal-resources">
+            <h2>Resources & Further Reading</h2>
+            <div class="resources-list">
+                <a href="https://sdgs.un.org/goals/goal4" target="_blank" rel="noopener">UN SDG 4 Official Page</a>
+                <a href="https://www.globalpartnership.org/" target="_blank" rel="noopener">Global Partnership for Education</a>
+                <a href="https://www.edtechhub.org/" target="_blank" rel="noopener">EdTech Hub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><span>GitHub</span></a>
+                <a href="#" aria-label="LinkedIn"><span>LinkedIn</span></a>
+                <a href="#" aria-label="Twitter"><span>Twitter</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SDG Details Modal -->
+    <div id="sdgModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>SDG 4: Quality Education</h2>
+            <p>Education enables upward socioeconomic mobility and is a key to escaping poverty. Over the past decade, major progress was made towards increasing access to education and school enrollment rates at all levels, particularly for girls. Nevertheless, about 260 million children were still out of school in 2018 — nearly one fifth of the global population in that age group.</p>
+            
+            <h3>Targets</h3>
+            <ul>
+                <li>By 2030, ensure that all girls and boys complete free, equitable and quality primary and secondary education</li>
+                <li>By 2030, ensure equal access for all women and men to affordable and quality technical, vocational and tertiary education</li>
+                <li>By 2030, substantially increase the number of youth and adults who have relevant skills for employment</li>
+                <li>Build and upgrade education facilities that are child, disability and gender sensitive</li>
+            </ul>
+            
+            <h3>Current Challenges</h3>
+            <p>Before the coronavirus crisis, projections showed that more than 200 million children would be out of school, and only 60 per cent of young people would be completing upper secondary education in 2030. The pandemic has exacerbated these challenges, with school closures affecting more than 90% of the world's student population.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

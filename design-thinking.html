@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Design Thinking</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">DevPortfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li class="active"><a href="design-thinking.html">Design Thinking</a></li>
+                    <li><a href="global-goals.html">Global Goals</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Design Thinking Process</h1>
+        
+        <section class="design-process">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h2>Empathize</h2>
+                <p>I conducted user research to understand my target audience - potential employers and clients. I identified their needs for clear information presentation, easy navigation, and quick access to my work samples.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h2>Define</h2>
+                <p>Based on research, I defined the key problems: how to showcase my skills effectively, make my portfolio memorable, and ensure it works well across devices.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h2>Ideate</h2>
+                <p>I brainstormed multiple layout options, color schemes, and content structures. I created sketches and wireframes to explore different approaches before settling on the current design.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h2>Prototype</h2>
+                <p>I built a working prototype using HTML and CSS, testing different interactive elements and navigation flows to find the most intuitive solution.</p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <h2>Test</h2>
+                <p>I conducted usability testing with peers and mentors, gathering feedback on the design, content, and functionality. I iterated based on their suggestions to improve the user experience.</p>
+            </div>
+        </section>
+
+        <section class="design-choices">
+            <h2>Key Design Choices</h2>
+            <div class="choices-grid">
+                <div class="choice-card">
+                    <h3>Color Scheme</h3>
+                    <p>I chose a primary blue color for trust and professionalism, with orange accents for energy and creativity. The palette meets WCAG contrast requirements.</p>
+                </div>
+                <div class="choice-card">
+                    <h3>Typography</h3>
+                    <p>Open Sans for body text ensures readability, while Roboto for headings provides clean, modern hierarchy. Font sizes are responsive for all devices.</p>
+                </div>
+                <div class="choice-card">
+                    <h3>Layout</h3>
+                    <p>Grid-based layout creates visual structure while maintaining flexibility. White space is used strategically to prevent overwhelm and guide the eye.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub"><span>GitHub</span></a>
+                <a href="#" aria-label="LinkedIn"><span>LinkedIn</span></a>
+                <a href="#" aria-label="Twitter"><span>Twitter</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
