@@ -1,0 +1,137 @@
+/* Global Goals Page Specific Styles */
+
+.goal-hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+}
+
+.goal-badge img {
+    width: 150px;
+    height: auto;
+}
+
+.goal-content h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--text-light);
+}
+
+.targets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.target-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.target-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.target-card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.action-list {
+    list-style-type: none;
+    margin: 2rem 0;
+}
+
+.action-list li {
+    padding: 1rem;
+    background-color: var(--bg-light);
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.action-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.action-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.action-response {
+    padding: 1rem;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    display: none;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.resource-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    transition: var(--transition);
+    color: var(--text-color);
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.resource-card h3 {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .goal-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .action-btn {
+        width: 100%;
+    }
+}

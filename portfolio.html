@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | Projects</title>
+    <title>My Work | Portfolio</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/portfolio.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">DevPortfolio</div>
+            <div class="logo">MyPortfolio</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
                     <li><a href="design-thinking.html">Design Thinking</a></li>
                     <li><a href="global-goals.html">Global Goals</a></li>
                     <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
             <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -25,93 +26,154 @@
     </header>
 
     <main class="container">
-        <h1>My Projects</h1>
+        <h1>My Portfolio</h1>
+        <p class="portfolio-intro">Here are some of my recent projects that showcase my skills in web development and design.</p>
         
         <div class="portfolio-filter">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="design">Design</button>
-            <button class="filter-btn" data-filter="hobby">Hobbies</button>
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="design">UI/UX Design</button>
+            <button class="filter-btn" data-filter="hobby">Hobby Projects</button>
         </div>
 
         <div class="portfolio-grid">
             <div class="portfolio-item" data-category="web">
-                <img src="https://via.placeholder.com/600x400" alt="E-commerce website project">
-                <div class="portfolio-overlay">
-                    <h3>E-commerce Site</h3>
-                    <p>Full-stack e-commerce platform with React and Node.js</p>
-                    <button class="btn view-details" data-project="1">View Details</button>
+                <div class="portfolio-card">
+                    <img src="images/project1.jpg" alt="E-commerce website screenshot" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>E-Commerce Website</h3>
+                        <p>A fully responsive online store with product filtering and cart functionality.</p>
+                        <button class="btn btn-small" onclick="openModal('modal1')">View Details</button>
+                    </div>
                 </div>
             </div>
 
             <div class="portfolio-item" data-category="design">
-                <img src="https://via.placeholder.com/600x400" alt="Mobile app design project">
-                <div class="portfolio-overlay">
-                    <h3>Fitness App UI</h3>
-                    <p>Mobile application design for fitness tracking</p>
-                    <button class="btn view-details" data-project="2">View Details</button>
+                <div class="portfolio-card">
+                    <img src="images/project2.jpg" alt="Mobile app design mockups" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Fitness App UI</h3>
+                        <p>User interface design for a mobile fitness tracking application.</p>
+                        <button class="btn btn-small" onclick="openModal('modal2')">View Details</button>
+                    </div>
                 </div>
             </div>
 
             <div class="portfolio-item" data-category="hobby">
-                <img src="https://via.placeholder.com/600x400" alt="Photography portfolio project">
-                <div class="portfolio-overlay">
-                    <h3>Photography Portfolio</h3>
-                    <p>Personal photography showcase website</p>
-                    <button class="btn view-details" data-project="3">View Details</button>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="web">
-                <img src="https://via.placeholder.com/600x400" alt="Weather application project">
-                <div class="portfolio-overlay">
-                    <h3>Weather App</h3>
-                    <p>Real-time weather application using API</p>
-                    <button class="btn view-details" data-project="4">View Details</button>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="design">
-                <img src="https://via.placeholder.com/600x400" alt="Brand identity project">
-                <div class="portfolio-overlay">
-                    <h3>Brand Identity</h3>
-                    <p>Complete brand package for startup company</p>
-                    <button class="btn view-details" data-project="5">View Details</button>
-                </div>
-            </div>
-
-            <div class="portfolio-item" data-category="hobby">
-                <img src="https://via.placeholder.com/600x400" alt="Travel blog project">
-                <div class="portfolio-overlay">
-                    <h3>Travel Blog</h3>
-                    <p>Personal travel experiences and guides</p>
-                    <button class="btn view-details" data-project="6">View Details</button>
+                <div class="portfolio-card">
+                    <img src="images/project3.jpg" alt="Photo gallery website screenshot" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Travel Photography</h3>
+                        <p>A personal gallery website showcasing my travel photography.</p>
+                        <button class="btn btn-small" onclick="openModal('modal3')">View Details</button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" aria-label="GitHub"><span>GitHub</span></a>
-                <a href="#" aria-label="LinkedIn"><span>LinkedIn</span></a>
-                <a href="#" aria-label="Twitter"><span>Twitter</span></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Project Details Modal -->
-    <div id="projectModal" class="modal">
+    <!-- Modal Windows -->
+    <div id="modal1" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="projectContent">
-                <!-- Content will be loaded dynamically -->
+            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            <h2>E-Commerce Website</h2>
+            <div class="modal-body">
+                <img src="images/project1.jpg" alt="Full screenshot of e-commerce website">
+                <div class="modal-text">
+                    <h3>Project Overview</h3>
+                    <p>This e-commerce website was built for a local boutique. It features product categorization, search functionality, and a secure checkout process.</p>
+                    
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>HTML5 & CSS3 (Flexbox/Grid)</li>
+                        <li>JavaScript for interactive elements</li>
+                        <li>PHP for backend functionality</li>
+                        <li>MySQL database</li>
+                    </ul>
+                    
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Responsive design that works on all devices</li>
+                        <li>Product filtering by category, price, and popularity</li>
+                        <li>Secure user authentication</li>
+                        <li>Accessible checkout process</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            <h2>Fitness App UI</h2>
+            <div class="modal-body">
+                <img src="images/project2.jpg" alt="Fitness app design mockups">
+                <div class="modal-text">
+                    <h3>Project Overview</h3>
+                    <p>UI/UX design for a fitness tracking mobile application. This project focused on creating an intuitive interface for tracking workouts and progress.</p>
+                    
+                    <h3>Design Process</h3>
+                    <ul>
+                        <li>User research and persona development</li>
+                        <li>Wireframing and prototyping</li>
+                        <li>Usability testing</li>
+                        <li>High-fidelity mockups</li>
+                    </ul>
+                    
+                    <h3>Tools Used</h3>
+                    <ul>
+                        <li>Figma for design and prototyping</li>
+                        <li>Adobe Illustrator for custom icons</li>
+                        <li>UserTesting.com for feedback</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+            <h2>Travel Photography Gallery</h2>
+            <div class="modal-body">
+                <img src="images/project3.jpg" alt="Travel photography gallery website">
+                <div class="modal-text">
+                    <h3>Project Overview</h3>
+                    <p>A personal project showcasing my travel photography from around the world. The site features a responsive gallery with filtering options.</p>
+                    
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript for gallery functionality</li>
+                        <li>Lightbox for image viewing</li>
+                        <li>CSS animations for transitions</li>
+                    </ul>
+                    
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Responsive image gallery with lazy loading</li>
+                        <li>Location-based filtering</li>
+                        <li>Keyboard accessible navigation</li>
+                        <li>Minimalist design to highlight photos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="accessibility.html">Accessibility Statement</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+            </ul>
+        </div>
+    </footer>
+
     <script src="js/script.js"></script>
+    <script src="js/portfolio.js"></script>
 </body>
 </html>

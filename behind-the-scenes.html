@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind the Scenes | My Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">MyPortfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="design-thinking.html">Design Thinking</a></li>
+                    <li><a href="global-goals.html">Global Goals</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Behind the Scenes</h1>
+        <p class="intro">This page provides a look at how I built this portfolio website, including technical challenges, design decisions, and lessons learned throughout the development process.</p>
+        
+        <section class="development-process">
+            <h2>Development Process</h2>
+            <p>Building this portfolio involved several key phases:</p>
+            
+            <div class="process-timeline">
+                <div class="timeline-item">
+                    <h3>Planning & Wireframing</h3>
+                    <p>I started by sketching wireframes and creating a sitemap to plan the structure and content hierarchy.</p>
+                    <div class="code-snippet">
+                        <img src="images/wireframe-sketch.jpg" alt="Hand-drawn wireframe sketches" width="600">
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>HTML Structure</h3>
+                    <p>Using semantic HTML5 elements was a priority to ensure accessibility and proper document structure.</p>
+                    <div class="code-snippet">
+                        <pre><code>&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;!-- Other navigation items --&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;section aria-labelledby="section1-heading"&gt;
+        &lt;h2 id="section1-heading"&gt;My Projects&lt;/h2&gt;
+        &lt;!-- Content --&gt;
+    &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>CSS Implementation</h3>
+                    <p>I used a mobile-first approach with CSS Grid and Flexbox for responsive layouts. CSS variables helped maintain consistency.</p>
+                    <div class="code-snippet">
+                        <pre><code>:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>JavaScript Features</h3>
+                    <p>Interactive elements like the modal windows and form validation were implemented with JavaScript.</p>
+                    <div class="code-snippet">
+                        <pre><code>// Modal functionality
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+
+// Form validation
+function validateForm() {
+    const email = document.getElementById('email').value;
+    if (!email.includes('@')) {
+        showError('emailError', 'Please enter a valid email address');
+        return false;
+    }
+    return true;
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Testing & Debugging</h3>
+                    <p>Browser developer tools were essential for testing and debugging across devices.</p>
+                    <div class="code-screenshot">
+                        <img src="images/devtools-screenshot.jpg" alt="Chrome DevTools showing CSS debugging" width="600">
+                        <p class="caption">Using Chrome DevTools to debug responsive layout issues</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="challenges-solutions">
+            <h2>Challenges & Solutions</h2>
+            
+            <div class="challenge-card">
+                <h3>Responsive Navigation</h3>
+                <p><strong>Challenge:</strong> Creating a navigation that works well on both desktop and mobile devices while remaining accessible.</p>
+                <p><strong>Solution:</strong> Implemented a mobile menu toggle with proper ARIA attributes and keyboard navigation support.</p>
+                <div class="code-snippet">
+                    <pre><code>&lt;button class="menu-toggle" aria-label="Toggle navigation menu" 
+        aria-expanded="false" aria-controls="main-nav"&gt;
+    ☰
+&lt;/button&gt;
+&lt;nav id="main-nav"&gt;
+    &lt;!-- Navigation items --&gt;
+&lt;/nav&gt;
+
+// JavaScript to toggle menu
+menuToggle.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('visible');
+});</code></pre>
+                </div>
+            </div>
+            
+            <div class="challenge-card">
+                <h3>Project Filtering</h3>
+                <p><strong>Challenge:</strong> Allowing users to filter portfolio items by category without page reloads.</p>
+                <p><strong>Solution:</strong> Used JavaScript to filter items based on data attributes, with smooth transitions.</p>
+                <div class="code-snippet">
+                    <pre><code>// Filter portfolio items
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        
+        portfolioItems.forEach(item => {
+            if (filter === 'all' || item.dataset.category === filter) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});</code></pre>
+                </div>
+            </div>
+            
+            <div class="challenge-card">
+                <h3>Form Validation</h3>
+                <p><strong>Challenge:</strong> Providing clear validation feedback while maintaining accessibility.</p>
+                <p><strong>Solution:</strong> Implemented client-side validation with descriptive error messages tied to form fields.</p>
+                <div class="code-snippet">
+                    <pre><code>function showError(elementId, message) {
+    const errorElement = document.getElementById(elementId);
+    errorElement.textContent = message;
+    errorElement.style.visibility = 'visible';
+    document.getElementById(elementId.replace('Error', ''))
+             .setAttribute('aria-invalid', 'true');
+}
+
+// Clear errors on input
+inputs.forEach(input => {
+    input.addEventListener('input', () => {
+        const errorId = input.id + 'Error';
+        document.getElementById(errorId).style.visibility = 'hidden';
+        input.setAttribute('aria-invalid', 'false');
+    });
+});</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="lessons-learned">
+            <h2>Key Lessons Learned</h2>
+            <div class="lessons-grid">
+                <div class="lesson-card">
+                    <h3>Mobile-First Approach</h3>
+                    <p>Starting with mobile design forced me to prioritize content and resulted in a cleaner, more focused layout.</p>
+                </div>
+                <div class="lesson-card">
+                    <h3>Progressive Enhancement</h3>
+                    <p>Building core functionality first and then enhancing it ensured the site remained usable without JavaScript.</p>
+                </div>
+                <div class="lesson-card">
+                    <h3>Accessibility from Start</h3>
+                    <p>Incorporating accessibility considerations from the beginning was easier than retrofitting later.</p>
+                </div>
+                <div class="lesson-card">
+                    <h3>CSS Organization</h3>
+                    <p>Using CSS variables and modular stylesheets made maintenance much easier as the project grew.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="future-improvements">
+            <h2>Future Improvements</h2>
+            <p>Areas I plan to enhance in future iterations:</p>
+            <ul>
+                <li>Implement a dark mode toggle</li>
+                <li>Add more interactive elements with smooth animations</li>
+                <li>Integrate a blog section with a CMS</li>
+                <li>Optimize performance further with lazy loading</li>
+                <li>Expand accessibility testing with more assistive technologies</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="accessibility.html">Accessibility Statement</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

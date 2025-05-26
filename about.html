@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | My Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">MyPortfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="design-thinking.html">Design Thinking</a></li>
+                    <li><a href="global-goals.html">Global Goals</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="about-section">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/profile.jpg" alt="[Your Name] smiling at the camera" width="400" height="400">
+                </div>
+                <div class="about-text">
+                    <h2>Hi, I'm [Your Name]</h2>
+                    <p>I'm a web developer with a passion for creating beautiful, functional, and accessible websites. My journey in web development began [your backstory].</p>
+                    <p>When I'm not coding, you can find me [your hobbies/interests]. I believe in continuous learning and staying updated with the latest web technologies.</p>
+                    
+                    <h3>My Education</h3>
+                    <ul class="education-list">
+                        <li>
+                            <strong>Web Development Certificate</strong>
+                            <span>ABC University, 2023</span>
+                        </li>
+                        <li>
+                            <strong>Bachelor's in Computer Science</strong>
+                            <span>XYZ College, 2018-2022</span>
+                        </li>
+                    </ul>
+
+                    <h3>Technical Skills</h3>
+                    <div class="skills-chart">
+                        <div class="skill">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Responsive Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Accessibility</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form" id="contact">
+            <h2>Get In Touch</h2>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="accessibility.html">Accessibility Statement</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/form-validation.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -10,14 +10,15 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">DevPortfolio</div>
+            <div class="logo">MyPortfolio</div>
             <nav>
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="design-thinking.html">Design Thinking</a></li>
                     <li><a href="global-goals.html">Global Goals</a></li>
                     <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
             <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -27,13 +28,12 @@
     <main class="container">
         <section class="hero">
             <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Julie</span></h1>
-                <h2>Web Developer & Designer</h2>
-                <p>Creating beautiful, functional websites with a focus on user experience and accessibility.</p>
+                <h1>Welcome to My Web Development Portfolio</h1>
+                <p>Hi, I'm Julie, a passionate web developer dedicated to creating accessible, responsive, and user-friendly websites.</p>
                 <a href="portfolio.html" class="btn">View My Work</a>
             </div>
             <div class="hero-image">
-                <img src="https://via.placeholder.com/400x400" alt="Alex smiling at the camera" class="profile-img">
+                <img src="images/profile.jpg" alt="Profile picture of Julie" width="400" height="400">
             </div>
         </section>
 
@@ -42,62 +42,44 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">💻</div>
-                    <h3>Front-End</h3>
-                    <p>HTML, CSS, JavaScript, React</p>
+                    <h3>HTML5 & CSS3</h3>
+                    <p>Semantic markup, responsive design, CSS Grid/Flexbox, animations</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>JavaScript</h3>
+                    <p>DOM manipulation, event handling, form validation, APIs</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">♿</div>
+                    <h3>Accessibility</h3>
+                    <p>WCAG compliance, ARIA labels, keyboard navigation</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🎨</div>
-                    <h3>Design</h3>
-                    <p>UI/UX, Responsive Design, Figma</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔍</div>
-                    <h3>Accessibility</h3>
-                    <p>WCAG, ARIA, Inclusive Design</p>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design, prototyping, design thinking</p>
                 </div>
             </div>
         </section>
 
         <section class="cta">
-            <h2>Let's Work Together</h2>
-            <p>Have a project in mind? I'd love to hear about it!</p>
-            <button id="contactBtn" class="btn">Contact Me</button>
+            <h2>Ready to Work Together?</h2>
+            <p>I'm currently available for freelance projects and collaborations.</p>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
         </section>
     </main>
 
     <footer>
         <div class="container">
             <p>&copy; 2023 My Portfolio. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" aria-label="GitHub"><span>GitHub</span></a>
-                <a href="#" aria-label="LinkedIn"><span>LinkedIn</span></a>
-                <a href="#" aria-label="Twitter"><span>Twitter</span></a>
-            </div>
+            <ul class="footer-links">
+                <li><a href="accessibility.html">Accessibility Statement</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="behind-the-scenes.html">Behind the Scenes</a></li>
+            </ul>
         </div>
     </footer>
-
-    <!-- Contact Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Contact Me</h2>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </div>
 
     <script src="js/script.js"></script>
 </body>
